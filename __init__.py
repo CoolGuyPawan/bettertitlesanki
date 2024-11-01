@@ -5,7 +5,7 @@ from aqt import mw
 
 class DeckNamer:
     def card_title(self):
-        """Set the window title to show custom and original lecture names during reviews."""
+        """Set the window title to the name of the subdeck (deck) that is currently being studied"""
         current_card = mw.reviewer.card
         
         # Get the full deck name associated with the card
@@ -13,7 +13,7 @@ class DeckNamer:
         # Extract the current subdeck name
         subdeck_name = full_deck_name.split("::")[-1].strip()
 
-        # Determine if we're in a custom study session
+        # Determine if you're in a custom study session
         if current_card.odid != current_card.did:
             # Get the original deck name
             original_deck_name = mw.col.decks.get(current_card.odid)['name']
