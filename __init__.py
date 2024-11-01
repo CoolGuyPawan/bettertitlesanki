@@ -5,7 +5,7 @@ from aqt import mw
 
 class DeckNamer:
     def card_title(self):
-        """Set the window title to the name of the deck (subdeck) that is currently being studied"""
+        """Set the window title to display the name of the deck (subdeck) that is currently being studied"""
         current_card = mw.reviewer.card
         
         # Get the full deck name associated with the card
