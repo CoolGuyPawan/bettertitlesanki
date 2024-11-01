@@ -13,7 +13,7 @@ class DeckNamer:
         # Extract the current subdeck name
         subdeck_name = full_deck_name.split("::")[-1].strip()
 
-        # Determine if you're in a custom study session
+        # Determine if you are in a custom study session
         if current_card.odid != current_card.did:
             # Get the original deck name
             original_deck_name = mw.col.decks.get(current_card.odid)['name']
